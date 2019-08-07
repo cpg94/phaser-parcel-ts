@@ -1,5 +1,5 @@
 import "phaser"
-import { Tree } from '../images'
+import { Tree, Man } from '../images'
 import Scenes from '../scenes'
 
 class Boot extends Phaser.Scene {
@@ -11,6 +11,8 @@ class Boot extends Phaser.Scene {
         this.load.image(Tree.FG, require("../assets/parallax-forest-front-trees.png"))
         this.load.image(Tree.MG, require("../assets/parallax-forest-middle-trees.png"))
         this.load.image(Tree.Lights, require("../assets/parallax-forest-lights.png"))
+
+        this.load.atlas(Man.Man, require('../assets/sprites.png'), require("../assets/sprites.json"))
     }
     create(){
         this.scene.start(Scenes.Game)
